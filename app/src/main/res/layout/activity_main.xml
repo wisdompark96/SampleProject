@@ -28,12 +28,9 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/pager"
+        <FrameLayout
+            android:id="@+id/layout_fragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-
+            android:layout_height="match_parent"></FrameLayout>
     </LinearLayout>
 </layout>

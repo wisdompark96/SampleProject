@@ -28,15 +28,10 @@ public class MainActivity extends AppCompatActivity {
         binding.tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         TabPagerAdapter tabPagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), binding.tabLayout.getTabCount());
-        binding.pager.setAdapter(tabPagerAdapter);
-
-        binding.pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(binding.tabLayout));
 
         binding.tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                binding.pager.setCurrentItem(tab.getPosition());
-
             }
 
             @Override

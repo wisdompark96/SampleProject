@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
+import com.google.android.material.picker.Month;
+
 public class TabPagerAdapter extends FragmentStatePagerAdapter {
 
     private int tabCount;
@@ -20,13 +22,13 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
         // Returning the current tabs
         switch (position) {
             case 0:
-                MonthFragment monthFragment = new MonthFragment();
+                MonthFragment monthFragment = MonthFragment.newInstance();
                 return monthFragment;
             case 1:
-                WeeklyFragment weeklyFragment = new WeeklyFragment();
+                WeeklyFragment weeklyFragment = WeeklyFragment.newInstance();
                 return weeklyFragment;
             case 2:
-                DailyFragment dailyFragment = new DailyFragment();
+                DailyFragment dailyFragment = DailyFragment.newInstance();
                 return dailyFragment;
             default:
                 return null;
